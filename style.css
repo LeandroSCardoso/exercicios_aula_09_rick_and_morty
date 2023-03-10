@@ -44,7 +44,7 @@ aside {
 }
 
 main {
-    display: flex;
+    display: grid;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 23px;
     font-weight: bold;
@@ -66,16 +66,15 @@ main {
 }
 
 
-li.nada {
-  list-style-type: none;
-  margin: 10px 10px 10px -10px ;
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    color: darkred;
+    font-weight: normal;
+    margin: 0px; 
+    padding: 0px;   
 }
 
-li.sup {
-    list-style-type: none;
-    margin: 10px 10px 10px -10px ;
-    display: block;
-  }
 
 .ls {
     display: inline-block;
@@ -148,6 +147,12 @@ p.espac {
     color: darkred;
 }
 
+p.dados {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 23px;
+    color: darkred;   
+}
 
 li {
     margin: 10px;

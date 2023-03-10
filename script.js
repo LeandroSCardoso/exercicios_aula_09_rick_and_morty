@@ -25,10 +25,49 @@ async function executar(){
         //PEGANDO ELEMENOTOS DO RETORNO CONFORME DOCUMENTAÇÃO
         const foto = document.getElementById("imgPersonagem")
         const nome = document.getElementById("nomePersonagem")
+        const Perstatus = document.getElementById("Perstatus")
+        const Perspecies = document.getElementById("Perspecies")
+        const Pertipo = document.getElementById("Pertipo")
+        const Pergenero = document.getElementById("Pergenero")
+        const Perorigem = document.getElementById("Perorigem")
+        const Perlocal = document.getElementById("Perlocal")
+
+
+
+
 
         //PASSANDO OS VALORES RECEBIDOS PARA OS COMPONENTES NA TELA
         foto.src = personagem.image
-        nome.innerHTML = personagem.name
+        nome.innerHTML = `Nome: ${personagem.name}`
+
+            //traduzindo o Status
+            if (personagem.status = 'Alive') {
+                personagem.status = 'Vivo'
+            } else if (personagem.status = 'Dead') {
+                personagem.status = 'Morto'
+            } else {
+                personagem.status = 'Desconhecido'
+            }
+
+        Perstatus.innerHTML = `Status: ${personagem.status}`
+        Perspecies.innerHTML = `Espécie: ${personagem.species}`
+        Pertipo.innerHTML = `Tipo: ${personagem.type}`
+
+            //traduzindo o genero
+            if (personagem.gender === 'Female') {
+                personagem.gender = 'Feminino'
+            } else if (personagem.gender === 'Male') {
+                personagem.gender = 'Masculino'
+            } else if (personagem.gender === 'Genderless') {
+                personagem.gender = 'Sem Gênero'
+            } else {
+                personagem.gender = 'Desconhecido'
+            }
+
+
+        Pergenero.innerHTML = `Genero: ${personagem.gender}`
+        Perorigem.innerHTML = `Origem: ${personagem.origin.name}`
+        Perlocal.innerHTML = `Localização: ${personagem.location.name}`
 
         
         //EXIBINDO A DIV QUE MOSTRA O PERSONAGEM RETORNADO
@@ -36,7 +75,7 @@ async function executar(){
         pegadiv.style.display = 'inline'         
 
     } else {
-        alert("Lembre-se, um numero entre 1 e 826. Você digitou " + value1)  
+        alert("Lembre-se, um numero entre 1 e 826. Você digitou " + value1) 
     }
 
 }
