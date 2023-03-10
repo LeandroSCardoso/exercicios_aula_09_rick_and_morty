@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 9 - Rick and Morty</title>
+</head>
+
+<body>
+
+    <div class="corpo">
+
+        <header class="topo">
+            <p class="espac">Rick and Morty</p>
+        </header>
+        <aside>
+            <p>Informe um numero entre 1 e 826.</p>
+            <div class="containerBusca">
+                <input class="links" id="idPersonagem" type="text" size="40px">
+                <button class="botao_envia" onclick="executar()">Buscar Pesonagem</button>
+            </div>
+        </aside>
+
+        <main>
+        <div class="containerPersonagem" id="resultado">
+            <p id="nomePersonagem">NOME</p>
+
+            <div>
+                <img id="imgPersonagem" src="" alt="imagemDoPersonagem">
+            </div>
+           
+                
+            
+        </div>
+
+        </main>
+
+
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <div class="links">
+                <a class="voltar" href="./index.htm">Voltar</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
